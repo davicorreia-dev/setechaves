@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Special+Elite&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    background-color: #000000;
+    }
+
+header {
+    background-color: #000000;
+    color: #0fdd08;
+    text-align: center;
+    padding: 20px 0;
+    }
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    }
+
+main {
+        max-width: 800px;
+        text-align: center;
+        margin: 20px auto;
+        padding: 0 20px;
+    }
+
+a {
+    color: #fff;
+    text-decoration: none; /* Remove o sublinhado */  
+}
+
+section {
+            background-color: #000000;
+            margin-bottom: 20px;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+h2 {
+    color: #fff;
+    text-align: center;
+    }
+
+footer {
+        background-color: #000000;
+        color: #0fdd08;
+        text-align: center;
+        padding: 20px 0;
+        bottom: 0;
+        width: 100%;
+        }
+
+button {
+    background-color: #f32121;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: #0fdd08;
+}
+
+#resposta {
+    width: 300px;  
+    height: 40px;  
+    font-size: 20px;  
+    padding: 10px; 
+    border: 2px solid #ccc;  
+    border-radius: 5px;  
+    text-align: center;
+    align-self: center;
+    font-family: "Special Elite", system-ui;
+}
+
+#resposta:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+#resposta::placeholder {
+    color: #888; /* Cor do texto do placeholder */
+    font-style: italic; /* Deixa o texto em itálico */
+}
+
+.escondido {
+    color: transparent;
+}
+
+.italico {
+    font-style: italic;
+}

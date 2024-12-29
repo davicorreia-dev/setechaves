@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/enigma.css">
+        <link rel="stylesheet" href="../CSS/cartas.css">
+        <title>Encontre o Valete</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Abra sua Mente</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Terceira Chave</h2>   
+            
+                <div class="cards-container">
+                    <div class="card" data-carta="1">
+                        <div class="card-inner">
+                            <div class="card-back">
+                                <img src="../Imagens/rei_ouro.png">
+                            </div>
+                            <div class="card-front">
+                                <img src="../Imagens/verso.png" alt="Verso da carta">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" data-carta="valete">
+                        <div class="card-inner">
+                            <div class="card-back">
+                                <img src="../Imagens/valete.png" alt="Carta Certa">
+                            </div>
+                            <div class="card-front">
+                                <img src="../Imagens/verso.png" alt="Verso da carta">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" data-carta="3">
+                        <div class="card-inner">
+                            <div class="card-back">
+                                <img src="../Imagens/rainha_copas.png" alt="Carta Errada">
+                            </div>
+                            <div class="card-front">
+                                <img src="../Imagens/verso.png" alt="Verso da carta">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button onclick="embaralharCartas()">Embaralhar Cartas</button>
+            </section>
+            
+        </main>
+        <footer>
+            <p>Lembre-se das cartas e das respostas</p>
+        </footer>
+    <script src= "../JS/respostas.js"></script>
+    </body>
+</html>
