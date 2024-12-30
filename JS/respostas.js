@@ -27,49 +27,74 @@ function verificarSegunda() {
     }
 }
 
-function embaralharCartas() {
-    const cards = document.querySelectorAll('.card');
-    
-    
-    cards.forEach(card => {
-        card.classList.add('shuffling');
-    });
+// LÓGICA DO JOGO DA MEMÓRIA 
 
-    
-    setTimeout(() => {
-        cards.forEach(card => {
-            card.classList.remove('shuffling');
-        });
+const cartas = document.querySelectorAll('.carta-memoria');
+let cartaVirada = false;
+let cartaPrimeira, cartaSegunda;
+let bloqueio = false;
 
-        
-        alert("Agora, tente encontrar o Valete!");
-    }, 2000);
+function virarCarta() {
+    if (bloqueio) return;
+    if (this === cartaPrimeira) return;
+
+    this.classList.add('virada');
+
+    if (!cartaVirada) {
+        cartaVirada = true;
+        cartaPrimeira = this;
+    } else {
+        cartaVirada = false;
+        cartaSegunda = this;
+
+        verificarPar();
+    }
 }
 
-// Função para verificar se a carta clicada é a correta
-function verificarCartaClicada(event) {
-    const card = event.currentTarget;
-    const isValete = card.getAttribute('data-carta') === 'valete'; // Verifica se é o valete
+function verificarPar() {
+    const isMatch = cartaPrimeira.dataset.carta === cartaSegunda.dataset.carta;
 
-    // Adiciona a classe 'flipped' para virar a carta
-    card.classList.add('flipped');
-
-    // Exibe a mensagem de acordo com o resultado após a carta virar
-    setTimeout(() => {
-        if (isValete) {
-            window.location.href = "../Fases/quarta_chave.html";
-        } 
-        else {
-            alert("Essa não é a carta correta. Tente novamente.");
-        }
-    }, 600); // Espera 600ms para dar tempo da carta virar
+    isMatch ? desativarCartas() : desvirarCartas();
 }
 
-// Adiciona o evento de clique a todas as cartas para verificar se é o Valete
-const cards = document.querySelectorAll('.card');
-cards.forEach(card => {
-    card.addEventListener('click', verificarCartaClicada);
-});
+function desativarCartas() {
+    cartaPrimeira.removeEventListener('click', virarCarta);
+    cartaSegunda.removeEventListener('click', virarCarta);
+
+    resetarTabuleiro();
+}
+
+function desvirarCartas() {
+    bloqueio = true;
+
+    setTimeout(() => {
+        cartaPrimeira.classList.remove('virada');
+        cartaSegunda.classList.remove('virada');
+
+        resetarTabuleiro();
+    }, 1000);
+}
+
+function resetarTabuleiro() {
+    [cartaVirada, bloqueio] = [false, false];
+    [cartaPrimeira, cartaSegunda] = [null, null];
+}
+
+cartas.forEach(carta => carta.addEventListener('click', virarCarta));
+
+(function shuffle() {
+
+   cards.forEach(card => {
+
+     let ramdomPos = Math.floor(Math.random() * 6);
+
+     card.style.order = ramdomPos;
+
+   });
+
+})();
+
+//FIM DO JOGO DA MEMÓRIA
 
 function verificarQuinta() {
     var resposta = document.getElementById("resposta").value;
