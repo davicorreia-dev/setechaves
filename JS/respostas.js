@@ -61,6 +61,7 @@ function desativarCartas() {
     cartaPrimeira.removeEventListener('click', virarCarta);
     cartaSegunda.removeEventListener('click', virarCarta);
 
+    verificarFimDoJogo();
     resetarTabuleiro();
 }
 
@@ -75,24 +76,22 @@ function desvirarCartas() {
     }, 1000);
 }
 
+function verificarFimDoJogo() {
+    const todasCartasViradas = [...cartas].every(carta => carta.classList.contains('virada'));
+
+    if (todasCartasViradas) {
+        setTimeout(() => {
+            window.location.href = "../Premios/premio_dois.html"; 
+        }, 1000); 
+    }
+}
+
 function resetarTabuleiro() {
     [cartaVirada, bloqueio] = [false, false];
     [cartaPrimeira, cartaSegunda] = [null, null];
 }
 
 cartas.forEach(carta => carta.addEventListener('click', virarCarta));
-
-(function shuffle() {
-
-   cards.forEach(card => {
-
-     let ramdomPos = Math.floor(Math.random() * 6);
-
-     card.style.order = ramdomPos;
-
-   });
-
-})();
 
 //FIM DO JOGO DA MEMÓRIA
 
