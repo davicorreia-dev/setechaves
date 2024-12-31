@@ -2,65 +2,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Segunda Chave</title>
         <link rel="stylesheet" href="../CSS/enigma.css">
         <link rel="stylesheet" href="../CSS/maquina.css">
-        <link rel="stylesheet" href="../CSS/cartas.css">
-        
+        <title>Terceira Chave</title>
     </head>
-
-    <body class="tabuleiro">
+    <body>
         <header>
-            <h1 class="typemaquina">Abra sua mente...</h1>
+            <h1 class="typemaquina">Livre-se do medo...</h1>
         </header>
         <main>
             <section>
-                <h1 class="typemaquina">Suas mentiras chegaram ao fim...</h1>
-                <h2 class="typemaquina">Semelhante ao um jogo de cartas</h2>
-                <h2 class="typemaquina">Sua imperatriz cegou o povo,<br>livre-se das correntes e busque<br>
-                a verdadeira liberdade.<br>
-                O Império e suas falsas palavras vão ser destruídos,<br>
-                junto com cada um que apoie essa ideia.</h2>
-            </section>
-            
-            <section class="jogo-memoria">
-                <div class = "carta-memoria" data-carta="rainha">
-                    <img class="frente-carta" src="../Imagens/rainha_copas.png" alt="Carta Rainha de Copas">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rainha de Copas">
-                </div>
-
-                <div class = "carta-memoria" data-carta="rei">
-                    <img class="frente-carta" src="../Imagens/rei_ouro.png" alt="Carta Rei de Ouro">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rei de Ouro">
-                </div>
-
-                <div class = "carta-memoria" data-carta="rei">
-                    <img class="frente-carta" src="../Imagens/rei_ouro.png" alt="Carta Rei de Ouro">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rei de Ouro">
-                </div>
-
-                <div class = "carta-memoria" data-carta="valete">
-                    <img class="frente-carta" src="../Imagens/valete.png" alt="Carta Valete">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Valete">
-                </div>
-
-                <div class = "carta-memoria" data-carta="rainha">
-                    <img class="frente-carta" src="../Imagens/rainha_copas.png" alt="Carta Rainha de Copas">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rainha de Copas">
-                </div>
-
-                <div class = "carta-memoria" data-carta="valete">
-                    <img class="frente-carta" src="../Imagens/valete.png" alt="Carta Valete">
-                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Valete">
-                </div>
+                <h2 class="typemaquina">Tanto "progresso" a que custo?<br>Até quando vamos ser enganados?</h2>
+                <h2 class="typemaquina">Até quando poder vai ser mais importante que pessoas.<br></h2>
+                <img src="../Imagens/Simbolo do Império.png" title="Bandeira do 4° Império" alt="Avareza" width="520" height="340">
+                <h3 class="typemaquina"> Quando inspecionamos o seu Império,<br>
+                    encontramos a resposta.</h3>
                 
             </section>
-        
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+            <!--A RESPOSTA É GANÂNCIA-->
+
+            <section>
+                <div>
+                    <h1>Quinta Pergunta:</h1>
+            
+                </div>
+                <form id="senhaForm" onsubmit="return verificarTerceira()">
+                    <input type="text" id="resposta" placeholder="Digite sua resposta aqui">
+                    <br></br>
+                    <button> Enviar 
+                </form>
+            </section>
         </main>
         <footer>
-            <p>Acresente ou diminua as letras e ache a resposta.</p>
+            <p>Tenta Sorte 4° Imperialista</p>
         </footer>
-
+        <script src= "../JS/respostas.js"></script>
     </body>
-    <script src ='../JS/respostas.js'></script>
 </html>

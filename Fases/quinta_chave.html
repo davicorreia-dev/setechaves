@@ -1,35 +1,46 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/enigma.css">
-    <link rel="stylesheet" href="../CSS/maquina.css">
-    <title>Segunda Chave</title>
-</head>
-<body>
-    <header>
-        <h1>Abra sua Mente</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Segunda Chave</h2>
-            <img src="../Imagens/Simbolo do Império.png" title="Bandeira do 4° Império" alt="Orgulho" width="520" height="340">
-            <h3> Quando inspecionamos o seu Império, encontramos a resposta.</h3>
-            <!--A RESPOSTA É ORGULHO-->
-        </section>
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Segunda Chave</title>
+        <link rel="stylesheet" href="../CSS/enigma.css">
+        <link rel="stylesheet" href="../CSS/maquina.css">
         
-        <section>
-            <h2>Solução</h2>
-            <form id="senhaForm" onsubmit="return verificarQuinta()">
-                <input type="text" id="resposta" placeholder="Digite sua resposta aqui">
-                <br></br>
-                <button> Enviar 
-            </form>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="typemaquina">Abra sua mente...</h1>
+        </header>
+        <main>
+            <section>
+                <h1 class="typemaquina">"4° Império é maior do que o Romano"</h1>
+                <h2 class="typemaquina">Tal soberba causará seu morte...</h2>
+                <h2 class="typemaquina">Tanto "progresso" a que custo?<br>Até quando vamos ser enganados?<br>
+                Não deixe o ego te controlar.<br>
+                Vamos ver se os imperialistas são <br>
+                tão superiores como falam</h2>
+                <h2 class="escondido">Cifra de César</h2>
+            </section>
             
-        </section>
-    </main>
-    <footer>
-        <p>Tenta Sorte 4° Imperialista</p>
-    </footer>
-    <script src= "../JS/respostas.js"></script>
-</body>
+            <section>
+                <div>
+                    <h1>Quinta Pergunta:</h1>
+                    <h2>Decifra a verdade</h2>
+                    <h3 class="italico">"Vynbsov wyljlkl h xblkh"</h3>
+                </div>
+                <form id="senhaForm" onsubmit="return verificarQuinta()">
+                    <input type="text" id="resposta" placeholder="Digite sua resposta aqui">
+                    <br></br>
+                    <button> Enviar 
+                </form>
+            </section>
+        
+        </main>
+        <footer>
+            <p>Acresente ou diminua as letras e ache a resposta.</p>
+        </footer>
+
+    </body>
+    <script src ='../JS/respostas.js'></script>
 </html>

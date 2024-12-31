@@ -13,20 +13,6 @@ function verificarPrimeira() {
     }
 }
 
-function verificarSegunda() {
-    var resposta = document.getElementById("resposta").value;
-
-    if (resposta === " Aqueles que mentem serão punidos") {
-        
-        window.location.href = "../Premios/premio_dois.html" ;
-        return false; 
-    } 
-    else {
-        window.location.href = "../Fases/errou.html" 
-        return false; 
-    }
-}
-
 // LÓGICA DO JOGO DA MEMÓRIA 
 
 const cartas = document.querySelectorAll('.carta-memoria');
@@ -95,17 +81,31 @@ cartas.forEach(carta => carta.addEventListener('click', virarCarta));
 
 //FIM DO JOGO DA MEMÓRIA
 
+function verificarTerceira() {
+    const resposta = document.getElementById("resposta").value.trim();
+
+    if (resposta === "Ganância") {
+        
+        window.location.href = "../Premios/premio_tres.html";
+    } else {
+        
+        window.location.href = "../Fases/errou.html";
+    }
+
+    return false; 
+}
+
+
 function verificarQuinta() {
     var resposta = document.getElementById("resposta").value;
 
-    if (resposta === "Orgulho" || resposta === "orgulho") {
+    if (resposta === "Orgulho precede a queda" || resposta === "orgulho precede a queda") {
         
-        window.location.href = "../Premios/premio_dois.html" ;
+        window.location.href = "../Premios/premio_cinco.html" ;
         return false; 
     } 
     else {
-        
-        alert("ACHOU ERRADO OTÁRIO(A)!");
+        window.location.href = "../Fases/errou.html" 
         return false; 
     }
 }

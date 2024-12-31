@@ -5,40 +5,60 @@
         <title>Segunda Chave</title>
         <link rel="stylesheet" href="../CSS/enigma.css">
         <link rel="stylesheet" href="../CSS/maquina.css">
+        <link rel="stylesheet" href="../CSS/cartas.css">
         
     </head>
 
-    <body>
+    <body class="tabuleiro">
         <header>
             <h1 class="typemaquina">Abra sua mente...</h1>
         </header>
         <main>
             <section>
-                <h1 class="typemaquina">"4° Império é maior do que o Romano"</h1>
-                <h2 class="typemaquina">Veja a verdade</h2>
-                <h2 class="typemaquina">Sua imperatriz cegou o povo,<br>livre-se das correntes e busque<br>
+                <h1 class="typemaquina">Todas as mentiras chegaram ao fim...</h1>
+                <h2 class="typemaquina">A imperatriz cegou o povo.</h2>
+                <h2 class="typemaquina">Semelhante ao um jogo de cartas,<br>livre-se das correntes e busque<br>
                 a verdadeira liberdade.<br>
-                O Império e sua ganância vai ser destruído,<br>
-                junto com cada ser que apoie essa ideia.</h2>
-                <h2 class="escondido">Cifra de César</h2>
+                O Império e suas falsas palavras vão ser destruídos,<br>
+                junto com cada um que apoie essa ideia.</h2>
             </section>
             
-            <section>
-                <div>
-                    <h1>Segunda Pergunta:</h1>
-                    <h2>Encontre a verdade</h2>
-                    <h3 class="italico">"Hxblslz xbl tlualt zlyãv wbupkvz"</h3>
+            <section class="jogo-memoria">
+                <div class = "carta-memoria" data-carta="rainha">
+                    <img class="frente-carta" src="../Imagens/rainha_copas.png" alt="Carta Rainha de Copas">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rainha de Copas">
                 </div>
-                <form id="senhaForm" onsubmit="return verificarSegunda()">
-                    <input type="text" id="resposta" placeholder="Digite sua resposta aqui">
-                    <br></br>
-                    <button> Enviar 
-                </form>
+
+                <div class = "carta-memoria" data-carta="rei">
+                    <img class="frente-carta" src="../Imagens/rei_ouro.png" alt="Carta Rei de Ouro">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rei de Ouro">
+                </div>
+
+                <div class = "carta-memoria" data-carta="rei">
+                    <img class="frente-carta" src="../Imagens/rei_ouro.png" alt="Carta Rei de Ouro">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rei de Ouro">
+                </div>
+
+                <div class = "carta-memoria" data-carta="valete">
+                    <img class="frente-carta" src="../Imagens/valete.png" alt="Carta Valete">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Valete">
+                </div>
+
+                <div class = "carta-memoria" data-carta="rainha">
+                    <img class="frente-carta" src="../Imagens/rainha_copas.png" alt="Carta Rainha de Copas">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Rainha de Copas">
+                </div>
+
+                <div class = "carta-memoria" data-carta="valete">
+                    <img class="frente-carta" src="../Imagens/valete.png" alt="Carta Valete">
+                    <img class="verso-carta" src="../Imagens/verso.png" alt="Verso Valete">
+                </div>
+                
             </section>
         
         </main>
         <footer>
-            <p>Acresente ou diminua as letras e ache a resposta.</p>
+            <p>Não esqueça das cartas</p>
         </footer>
 
     </body>
